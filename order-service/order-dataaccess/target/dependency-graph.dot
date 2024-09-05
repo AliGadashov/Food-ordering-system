@@ -1,0 +1,13 @@
+digraph "order-dataaccess" {
+  node [shape="box",style="rounded",fontname="Helvetica",fontsize="14"]
+  edge [fontsize="10",fontname="Helvetica"]
+
+  // Node Definitions:
+  "org.gadashov:order-application-service:jar"[label=<order-application-service>]
+  "org.gadashov:order-domain-core:jar"[label=<order-domain-core>]
+  "org.gadashov:order-dataaccess:jar"[label=<order-dataaccess>]
+
+  // Edge Definitions:
+  "org.gadashov:order-application-service:jar" -> "org.gadashov:order-domain-core:jar"
+  "org.gadashov:order-dataaccess:jar" -> "org.gadashov:order-application-service:jar"
+}

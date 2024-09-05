@@ -1,0 +1,19 @@
+digraph "order-container" {
+  node [shape="box",style="rounded",fontname="Helvetica",fontsize="14"]
+  edge [fontsize="10",fontname="Helvetica"]
+
+  // Node Definitions:
+  "org.gadashov:order-container:jar"[label=<order-container>]
+  "org.gadashov:order-application-service:jar"[label=<order-application-service>]
+  "org.gadashov:order-domain-core:jar"[label=<order-domain-core>]
+  "org.gadashov:order-application:jar"[label=<order-application>]
+  "org.gadashov:order-dataaccess:jar"[label=<order-dataaccess>]
+  "org.gadashov:order-messaging:jar"[label=<order-messaging>]
+
+  // Edge Definitions:
+  "org.gadashov:order-container:jar" -> "org.gadashov:order-application-service:jar"
+  "org.gadashov:order-container:jar" -> "org.gadashov:order-domain-core:jar"
+  "org.gadashov:order-container:jar" -> "org.gadashov:order-application:jar"
+  "org.gadashov:order-container:jar" -> "org.gadashov:order-dataaccess:jar"
+  "org.gadashov:order-container:jar" -> "org.gadashov:order-messaging:jar"
+}
